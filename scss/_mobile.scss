@@ -70,6 +70,16 @@
         grid-template-columns: 1fr;
     }
 
+    .about-info-Knowledge{
+        grid-template-areas:
+        'know1'
+        'know2'
+        'know3'
+        'know4'
+        'know5'
+        'know6';
+        grid-template-columns: 1fr;
+    }
 
     .projects{
         grid-template-columns: repeat(2,1fr);
