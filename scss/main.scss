@@ -1,15 +1,12 @@
-
 @import 'config';
 @import 'menu';
-
-
 
 *{
     box-sizing: border-box;
 }
 
 body{
-    @include background();
+    @include background;
     background: $primary-color;
     color: set-text-color($primary-color);
     height: 100%;
@@ -19,18 +16,18 @@ body{
 }
 
 //Heading
-h1, h2, h3{
+h1,h2,h3{
     margin: 0;
-    font-weight: 400; 
+    font-weight: 400;  
 
     &.lg-heading{
-        font-size: 2.5rem;
+        font-size: 2.5rem;       
     }
 
     &.sm-heading{
-        margin-bottom: 2rem; 
+        margin-bottom: 2rem;
         padding: 0.2rem 1rem;
-        background: rgba(lighten($primary-color, 2),0.5);
+        background: rgba(lighten($primary-color, 2), 0.5);
     }
 }
 
@@ -51,7 +48,8 @@ header{
 
 main{
     padding: 4rem;
-    min-height: calc(100vh-60px);
+    //height: 100%;
+    min-height: calc(100vh - 60px);
 
     .icons{
         margin-top: 1rem;
@@ -171,12 +169,10 @@ main{
     }
 } 
 
-
-
 //work/project
 .projects{
     display: grid;
-    grid-gap: 0.7rem;
+    grid-gap:0.7rem;
     grid-template-columns: repeat(3,1fr);
 
     img{
@@ -231,6 +227,11 @@ main{
     }
 }
  
+.btn-dark{
+    @extend .btn;
+    background: darken($primary-color, 50);
+    color:#fff;
+}
 
 .btn-light{
     @extend .btn;
@@ -238,16 +239,12 @@ main{
     color:#333;
 }
 
-
-
 #main-footer{
     text-align: center;
     padding: 1rem;
-    background: darken($primary-color, 10);
+    background: darken($primary-color , 10);
     color: set-text-color($primary-color);
     height: 60px;
 }
-
-
 
 @import 'mobile';

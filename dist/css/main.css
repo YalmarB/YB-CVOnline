@@ -138,7 +138,7 @@ header {
 
 main {
   padding: 4rem;
-  min-height: calc(100vh-60px); }
+  min-height: calc(100vh - 60px); }
   main .icons {
     margin-top: 1rem; }
     main .icons a {
@@ -240,14 +240,18 @@ main {
       .boxes div:hover span {
         color: #000; }
 
-.btn, .btn-light {
+.btn, .btn-dark, .btn-light {
   display: block;
   padding: 0.5rem 1rem;
   border: 0;
   margin-bottom: 0.3rem; }
-  .btn:hover, .btn-light:hover {
+  .btn:hover, .btn-dark:hover, .btn-light:hover {
     background: #eece1a;
     color: #000; }
+
+.btn-dark {
+  background: black;
+  color: #fff; }
 
 .btn-light {
   background: #c4c4c4;
